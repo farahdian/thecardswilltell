@@ -1,5 +1,7 @@
 # tarotreader
 
+![Screenshot (20)](https://user-images.githubusercontent.com/72678356/126303342-02e12b7d-7430-4cd7-89ff-5800fcec4b74.png)
+
 An online tarot card reader that performs a simple 3 card spread: past, present and future.
 
 Made with Vue JS and Animate.css library.
