@@ -1,16 +1,21 @@
 <template>
 <div class="container">
   
-  <Header title="What's in the cards for you?" class="header animate__animated animate__slideInDown"/>
-  
+  <Header title="Bad User Story Tarot" class="header animate__animated animate__slideInDown"/>
+
   <div class="spread">
 
   <div v-bind:key="card.id" v-for="card in cards">
-    <h2>{{card.time == "PAST" ? "PAST" : (card.time == "PRESENT" ? "PRESENT" : "FUTURE")}}</h2>
+    <h2>{{card.time == "PAST" ? "YOUR USER" : (card.time == "PRESENT" ? "THEIR WANTS" : "THEIR IDEAL OUTCOME")}}</h2>
      <Card :card="card"/> 
   </div> 
 
   </div>
+   <div v-bind:key="card.id" v-for="card in cards">
+     <h3>{{card.time == "PAST" ? "As a user who struggles with..." : (card.time == "PRESENT" ? "I want..." : "So that I can have...")}}</h3>
+     <Madlibs :card="card"/> 
+     </div>
+  
 
   <div class="footer">
   <Button @btn-click="fetchNewCards" text="Deal a new fortune"/>
@@ -23,6 +28,8 @@
 import Header from './components/Header';
 import Button from './components/Button';
 import Card from './components/Card';
+import Madlibs from './components/Madlibs';
+
 
 
 export default {
@@ -31,6 +38,7 @@ export default {
     Header,
     Button,
     Card,
+    Madlibs
    
   },
   data(){

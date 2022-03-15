@@ -3,8 +3,7 @@
 <div class="card">
     <i class="fas fa-eye"></i>
     <h3>{{card.name}}</h3>
-    <p v-show="!card.isReversed">Position Upright:<br> {{card.meaning_up}}</p>
-    <p v-show="card.isReversed">Position Reversed: <br> {{card.meaning_rev}}</p>
+    <i class="fas fa-bahai"></i>
 </div>
 </div>
     
@@ -14,6 +13,7 @@ export default {
     name :"Card",
     props: {
         card: Object,
+
     }
     
 }
@@ -62,6 +62,10 @@ export default {
     cursor:grab;
     animation:flip;
     animation-duration: 2s;
+}
+i{
+    color:darkslateblue;
+    font-size: 5em;
 }
 
 .fa-eye{
