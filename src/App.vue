@@ -6,7 +6,7 @@
   <div class="spread">
 
   <div v-bind:key="card.id" v-for="card in cards">
-    <h2>{{card.time == "PAST" ? "YOUR USER" : (card.time == "PRESENT" ? "THEIR WANTS" : "THEIR IDEAL OUTCOME")}}</h2>
+    <h2>{{card.time == "PAST" ? "YOUR USER" : (card.time == "PRESENT" ? "THEIR WANTS" : "THEIR OUTCOME")}}</h2>
      <Card :card="card"/> 
   </div> 
 
